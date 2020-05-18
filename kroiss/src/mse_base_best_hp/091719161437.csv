@@ -1,0 +1,2 @@
+round_epochs,val_loss,val_circular_mae,loss,circular_mae,activation,batch_size,dropout,epochs,first_neuron,hidden_layers,lr,optimizer,samples
+1,711.6979370117188,9.763374328613281,1779.2376467285155,23.173805728912352,leakyrelu,64,0.25,1,1024,2,1,<class 'keras.optimizers.Adam'>,20000

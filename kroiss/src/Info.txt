@@ -1,0 +1,8 @@
+2019-05-24:
+https://www.pugetsystems.com/labs/hpc/How-to-Install-TensorFlow-with-GPU-Support-on-Windows-10-Without-Installing-CUDA-UPDATED-1419/
+- Installation Anaconda
+- Aufsetzen virtuelle Umgebung (tkroiss)
+	*conda create -n tkroiss pip python=3.6
+	*conda activate C:\Users\fachschaft\tkroiss\Anaconda3\envs\tkroiss
+	*Installation Tensorflow-gpu (conda install)
+	*Installation matplotlib, pandas, sklearn, jupyter notebook, -U unrealcv (pip install)
