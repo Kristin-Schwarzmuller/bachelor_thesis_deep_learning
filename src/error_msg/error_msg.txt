@@ -1,0 +1,498 @@
+  0%|                                                                                            | 0/1 [00:00<?, ?it/s]
+
+{'activation': 'leakyrelu', 'batch_size': 32, 'dropout': 0.25, 'epochs': 400, 'first_neuron': 4096, 'hidden_layers': 0, 'label_type': 'Angular', 'leaky_alpha': 0.1, 'loss_function': 'mean_squared_error', 'lr': 5, 'monitor_value': 'val_custom_mae', 'optimizer': <class 'tensorflow.python.keras.optimizer_v2.adam.Adam'>, 'reduction_metric': 'custom_mae', 'samples': 100000}
+==========================Params:
+{'activation': 'leakyrelu', 'batch_size': 32, 'dropout': 0.25, 'epochs': 400, 'first_neuron': 4096, 'hidden_layers': 0, 'label_type': 'Angular', 'leaky_alpha': 0.1, 'loss_function': 'mean_squared_error', 'lr': 5, 'monitor_value': 'val_custom_mae', 'optimizer': <class 'tensorflow.python.keras.optimizer_v2.adam.Adam'>, 'reduction_metric': 'custom_mae', 'samples': 100000}
+==========================
+Y-Col: ['Elevation', 'Azimuth']
+Train Data Generator: Found 80000 validated image filenames.
+Validation Data Generator: Found 20000 validated image filenames.
+Steps per Epoch: 2500, Validation Steps: 625
+_________________________________________________________________
+   Network Layer        Trainable
+=================================================================
+         input_1                0
+    block1_conv1                0
+    block1_conv2                0
+     block1_pool                0
+    block2_conv1                0
+    block2_conv2                0
+     block2_pool                0
+    block3_conv1                0
+    block3_conv2                0
+    block3_conv3                0
+     block3_pool                0
+    block4_conv1                0
+    block4_conv2                0
+    block4_conv3                0
+     block4_pool                0
+    block5_conv1                1
+    block5_conv2                1
+    block5_conv3                1
+     block5_pool                1
+_________________________________________________________________
+
+Number Hidden Layers 0
+Fully Connected Layers added to Base Network
+Using Loss: mean_squared_error 
+and Reduction Metric: [<function custom_mae at 0x0000025844A7DAF8>]
+Model was compiled
+Model: "sequential"
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #   
+=================================================================
+vgg16 (Model)                (None, 7, 7, 512)         14714688  
+_________________________________________________________________
+sequential_1 (Sequential)    (None, 2)                 102772738 
+=================================================================
+Total params: 117,487,426
+Trainable params: 109,852,162
+Non-trainable params: 7,635,264
+_________________________________________________________________
+None
+_________________________________________________________________
+Checkpointer was created
+CSV Logger was created
+Learning Rate Reducer was created
+Early Stopper was created
+WARNING:tensorflow:sample_weight modes were coerced from
+  ...
+    to  
+  ['...']
+WARNING:tensorflow:sample_weight modes were coerced from
+  ...
+    to  
+  ['...']
+Train for 2500 steps, validate for 625 steps
+Epoch 1/400
+2499/2500 [============================>.] - ETA: 0s - loss: 4472.5325 - custom_mae: 44.9198
+Epoch 00001: val_custom_mae improved from inf to 33.53419, saving model to ..\fast_output\SYNTH_Regression_MSE\201019_2253_final_Angular_Top_1_Custom-MAE\Synth_TD\CNN_Base_32_Model_and_Weights_80000.hdf5
+2500/2500 [==============================] - 926s 370ms/step - loss: 4471.8743 - custom_mae: 44.9161 - val_loss: 2746.1471 - val_custom_mae: 33.5342
+Epoch 2/400
+2499/2500 [============================>.] - ETA: 0s - loss: 2567.7566 - custom_mae: 31.6268
+Epoch 00002: val_custom_mae improved from 33.53419 to 28.41474, saving model to ..\fast_output\SYNTH_Regression_MSE\201019_2253_final_Angular_Top_1_Custom-MAE\Synth_TD\CNN_Base_32_Model_and_Weights_80000.hdf5
+2500/2500 [==============================] - 841s 336ms/step - loss: 2567.1777 - custom_mae: 31.6238 - val_loss: 2141.3057 - val_custom_mae: 28.4147
+Epoch 3/400
+2499/2500 [============================>.] - ETA: 0s - loss: 2062.9327 - custom_mae: 27.2161
+Epoch 00003: val_custom_mae improved from 28.41474 to 25.00056, saving model to ..\fast_output\SYNTH_Regression_MSE\201019_2253_final_Angular_Top_1_Custom-MAE\Synth_TD\CNN_Base_32_Model_and_Weights_80000.hdf5
+2500/2500 [==============================] - 839s 335ms/step - loss: 2062.4779 - custom_mae: 27.2125 - val_loss: 1767.0827 - val_custom_mae: 25.0006
+Epoch 4/400
+2499/2500 [============================>.] - ETA: 0s - loss: 1804.1940 - custom_mae: 24.8350
+Epoch 00004: val_custom_mae improved from 25.00056 to 23.64624, saving model to ..\fast_output\SYNTH_Regression_MSE\201019_2253_final_Angular_Top_1_Custom-MAE\Synth_TD\CNN_Base_32_Model_and_Weights_80000.hdf5
+2500/2500 [==============================] - 841s 336ms/step - loss: 1804.3910 - custom_mae: 24.8367 - val_loss: 1651.9300 - val_custom_mae: 23.6462
+Epoch 5/400
+2499/2500 [============================>.] - ETA: 0s - loss: 1623.0927 - custom_mae: 23.1056
+Epoch 00005: val_custom_mae improved from 23.64624 to 22.52908, saving model to ..\fast_output\SYNTH_Regression_MSE\201019_2253_final_Angular_Top_1_Custom-MAE\Synth_TD\CNN_Base_32_Model_and_Weights_80000.hdf5
+2500/2500 [==============================] - 843s 337ms/step - loss: 1622.9727 - custom_mae: 23.1048 - val_loss: 1558.5292 - val_custom_mae: 22.5291
+Epoch 6/400
+2499/2500 [============================>.] - ETA: 0s - loss: 1508.0037 - custom_mae: 21.8302
+Epoch 00006: val_custom_mae improved from 22.52908 to 20.82411, saving model to ..\fast_output\SYNTH_Regression_MSE\201019_2253_final_Angular_Top_1_Custom-MAE\Synth_TD\CNN_Base_32_Model_and_Weights_80000.hdf5
+2500/2500 [==============================] - 842s 337ms/step - loss: 1507.9411 - custom_mae: 21.8290 - val_loss: 1378.8570 - val_custom_mae: 20.8241
+Epoch 7/400
+2499/2500 [============================>.] - ETA: 0s - loss: 1409.6039 - custom_mae: 20.8642
+Epoch 00007: val_custom_mae improved from 20.82411 to 20.18318, saving model to ..\fast_output\SYNTH_Regression_MSE\201019_2253_final_Angular_Top_1_Custom-MAE\Synth_TD\CNN_Base_32_Model_and_Weights_80000.hdf5
+2500/2500 [==============================] - 841s 336ms/step - loss: 1409.5190 - custom_mae: 20.8639 - val_loss: 1350.1104 - val_custom_mae: 20.1832
+Epoch 8/400
+2499/2500 [============================>.] - ETA: 0s - loss: 1332.4251 - custom_mae: 20.0807
+Epoch 00008: val_custom_mae improved from 20.18318 to 19.68280, saving model to ..\fast_output\SYNTH_Regression_MSE\201019_2253_final_Angular_Top_1_Custom-MAE\Synth_TD\CNN_Base_32_Model_and_Weights_80000.hdf5
+2500/2500 [==============================] - 839s 336ms/step - loss: 1332.5496 - custom_mae: 20.0817 - val_loss: 1307.5110 - val_custom_mae: 19.6828
+Epoch 9/400
+2499/2500 [============================>.] - ETA: 0s - loss: 1277.0240 - custom_mae: 19.4009
+Epoch 00009: val_custom_mae did not improve from 19.68280
+2500/2500 [==============================] - 834s 334ms/step - loss: 1277.4164 - custom_mae: 19.4030 - val_loss: 1419.9325 - val_custom_mae: 21.4394
+Epoch 10/400
+2499/2500 [============================>.] - ETA: 0s - loss: 1223.8753 - custom_mae: 18.8263
+Epoch 00010: val_custom_mae improved from 19.68280 to 18.62947, saving model to ..\fast_output\SYNTH_Regression_MSE\201019_2253_final_Angular_Top_1_Custom-MAE\Synth_TD\CNN_Base_32_Model_and_Weights_80000.hdf5
+2500/2500 [==============================] - 840s 336ms/step - loss: 1223.6730 - custom_mae: 18.8254 - val_loss: 1209.6573 - val_custom_mae: 18.6295
+Epoch 11/400
+2499/2500 [============================>.] - ETA: 0s - loss: 1173.5589 - custom_mae: 18.2758
+Epoch 00011: val_custom_mae improved from 18.62947 to 17.96677, saving model to ..\fast_output\SYNTH_Regression_MSE\201019_2253_final_Angular_Top_1_Custom-MAE\Synth_TD\CNN_Base_32_Model_and_Weights_80000.hdf5
+2500/2500 [==============================] - 840s 336ms/step - loss: 1173.8286 - custom_mae: 18.2771 - val_loss: 1164.2130 - val_custom_mae: 17.9668
+Epoch 12/400
+2499/2500 [============================>.] - ETA: 0s - loss: 1140.9671 - custom_mae: 17.8783
+Epoch 00012: val_custom_mae did not improve from 17.96677
+2500/2500 [==============================] - 835s 334ms/step - loss: 1140.8848 - custom_mae: 17.8773 - val_loss: 1156.3640 - val_custom_mae: 18.0332
+Epoch 13/400
+2499/2500 [============================>.] - ETA: 0s - loss: 1096.3374 - custom_mae: 17.4127
+Epoch 00013: val_custom_mae improved from 17.96677 to 17.09474, saving model to ..\fast_output\SYNTH_Regression_MSE\201019_2253_final_Angular_Top_1_Custom-MAE\Synth_TD\CNN_Base_32_Model_and_Weights_80000.hdf5
+2500/2500 [==============================] - 841s 336ms/step - loss: 1096.0731 - custom_mae: 17.4112 - val_loss: 1104.9287 - val_custom_mae: 17.0947
+Epoch 14/400
+2499/2500 [============================>.] - ETA: 0s - loss: 1065.9777 - custom_mae: 17.0267
+Epoch 00014: val_custom_mae improved from 17.09474 to 16.91528, saving model to ..\fast_output\SYNTH_Regression_MSE\201019_2253_final_Angular_Top_1_Custom-MAE\Synth_TD\CNN_Base_32_Model_and_Weights_80000.hdf5
+2500/2500 [==============================] - 848s 339ms/step - loss: 1065.9366 - custom_mae: 17.0261 - val_loss: 1090.2727 - val_custom_mae: 16.9153
+Epoch 15/400
+2499/2500 [============================>.] - ETA: 0s - loss: 1047.0616 - custom_mae: 16.7086
+Epoch 00015: val_custom_mae did not improve from 16.91528
+2500/2500 [==============================] - 848s 339ms/step - loss: 1047.0396 - custom_mae: 16.7088 - val_loss: 1127.6258 - val_custom_mae: 17.7762
+Epoch 16/400
+2499/2500 [============================>.] - ETA: 0s - loss: 1012.1098 - custom_mae: 16.3278
+Epoch 00016: val_custom_mae did not improve from 16.91528
+2500/2500 [==============================] - 845s 338ms/step - loss: 1011.9152 - custom_mae: 16.3267 - val_loss: 1105.9787 - val_custom_mae: 17.0875
+Epoch 17/400
+2499/2500 [============================>.] - ETA: 0s - loss: 990.9260 - custom_mae: 16.0650
+Epoch 00017: val_custom_mae improved from 16.91528 to 16.70107, saving model to ..\fast_output\SYNTH_Regression_MSE\201019_2253_final_Angular_Top_1_Custom-MAE\Synth_TD\CNN_Base_32_Model_and_Weights_80000.hdf5
+2500/2500 [==============================] - 850s 340ms/step - loss: 991.2653 - custom_mae: 16.0654 - val_loss: 1086.5077 - val_custom_mae: 16.7011
+Epoch 18/400
+2499/2500 [============================>.] - ETA: 0s - loss: 969.5432 - custom_mae: 15.7857
+Epoch 00018: val_custom_mae improved from 16.70107 to 16.20435, saving model to ..\fast_output\SYNTH_Regression_MSE\201019_2253_final_Angular_Top_1_Custom-MAE\Synth_TD\CNN_Base_32_Model_and_Weights_80000.hdf5
+2500/2500 [==============================] - 856s 342ms/step - loss: 969.5189 - custom_mae: 15.7859 - val_loss: 991.3253 - val_custom_mae: 16.2044
+Epoch 19/400
+2499/2500 [============================>.] - ETA: 0s - loss: 942.0059 - custom_mae: 15.4963
+Epoch 00019: val_custom_mae improved from 16.20435 to 15.34565, saving model to ..\fast_output\SYNTH_Regression_MSE\201019_2253_final_Angular_Top_1_Custom-MAE\Synth_TD\CNN_Base_32_Model_and_Weights_80000.hdf5
+2500/2500 [==============================] - 850s 340ms/step - loss: 941.9899 - custom_mae: 15.4955 - val_loss: 956.5084 - val_custom_mae: 15.3456
+Epoch 20/400
+2499/2500 [============================>.] - ETA: 0s - loss: 936.3397 - custom_mae: 15.3486
+Epoch 00020: val_custom_mae did not improve from 15.34565
+2500/2500 [==============================] - 849s 340ms/step - loss: 936.2300 - custom_mae: 15.3481 - val_loss: 999.0431 - val_custom_mae: 15.7877
+Epoch 21/400
+2499/2500 [============================>.] - ETA: 0s - loss: 904.8157 - custom_mae: 15.0289
+Epoch 00021: val_custom_mae did not improve from 15.34565
+2500/2500 [==============================] - 849s 340ms/step - loss: 904.6769 - custom_mae: 15.0281 - val_loss: 950.6010 - val_custom_mae: 15.4587
+Epoch 22/400
+2499/2500 [============================>.] - ETA: 0s - loss: 892.3485 - custom_mae: 14.8092
+Epoch 00022: val_custom_mae did not improve from 15.34565
+2500/2500 [==============================] - 850s 340ms/step - loss: 892.4768 - custom_mae: 14.8103 - val_loss: 958.9723 - val_custom_mae: 15.4427
+Epoch 23/400
+2499/2500 [============================>.] - ETA: 0s - loss: 879.6201 - custom_mae: 14.6516
+Epoch 00023: val_custom_mae did not improve from 15.34565
+2500/2500 [==============================] - 879s 352ms/step - loss: 879.7184 - custom_mae: 14.6527 - val_loss: 947.2849 - val_custom_mae: 15.3995
+Epoch 24/400
+2499/2500 [============================>.] - ETA: 0s - loss: 857.5058 - custom_mae: 14.3903
+Epoch 00024: val_custom_mae improved from 15.34565 to 14.68239, saving model to ..\fast_output\SYNTH_Regression_MSE\201019_2253_final_Angular_Top_1_Custom-MAE\Synth_TD\CNN_Base_32_Model_and_Weights_80000.hdf5
+2500/2500 [==============================] - 888s 355ms/step - loss: 857.4207 - custom_mae: 14.3902 - val_loss: 918.2118 - val_custom_mae: 14.6824
+Epoch 25/400
+2499/2500 [============================>.] - ETA: 0s - loss: 855.8900 - custom_mae: 14.2712
+Epoch 00025: val_custom_mae improved from 14.68239 to 14.55497, saving model to ..\fast_output\SYNTH_Regression_MSE\201019_2253_final_Angular_Top_1_Custom-MAE\Synth_TD\CNN_Base_32_Model_and_Weights_80000.hdf5
+2500/2500 [==============================] - 845s 338ms/step - loss: 855.8858 - custom_mae: 14.2710 - val_loss: 889.4012 - val_custom_mae: 14.5550
+Epoch 26/400
+2499/2500 [============================>.] - ETA: 0s - loss: 824.0153 - custom_mae: 13.9982
+Epoch 00026: val_custom_mae improved from 14.55497 to 14.41926, saving model to ..\fast_output\SYNTH_Regression_MSE\201019_2253_final_Angular_Top_1_Custom-MAE\Synth_TD\CNN_Base_32_Model_and_Weights_80000.hdf5
+2500/2500 [==============================] - 843s 337ms/step - loss: 823.7790 - custom_mae: 13.9966 - val_loss: 877.9440 - val_custom_mae: 14.4193
+Epoch 27/400
+2499/2500 [============================>.] - ETA: 0s - loss: 819.8446 - custom_mae: 13.9010- ETA: 4s - loss: 820.8017 - custo
+Epoch 00027: val_custom_mae did not improve from 14.41926
+2500/2500 [==============================] - 842s 337ms/step - loss: 819.8698 - custom_mae: 13.9015 - val_loss: 1001.9809 - val_custom_mae: 15.1536
+Epoch 28/400
+2499/2500 [============================>.] - ETA: 0s - loss: 802.5787 - custom_mae: 13.6149
+Epoch 00028: val_custom_mae improved from 14.41926 to 14.10527, saving model to ..\fast_output\SYNTH_Regression_MSE\201019_2253_final_Angular_Top_1_Custom-MAE\Synth_TD\CNN_Base_32_Model_and_Weights_80000.hdf5
+2500/2500 [==============================] - 846s 338ms/step - loss: 802.6444 - custom_mae: 13.6154 - val_loss: 870.2169 - val_custom_mae: 14.1053
+Epoch 29/400
+2499/2500 [============================>.] - ETA: 0s - loss: 793.7200 - custom_mae: 13.5244
+Epoch 00029: val_custom_mae did not improve from 14.10527
+2500/2500 [==============================] - 841s 336ms/step - loss: 793.4637 - custom_mae: 13.5219 - val_loss: 869.1085 - val_custom_mae: 14.2167
+Epoch 30/400
+2499/2500 [============================>.] - ETA: 0s - loss: 788.2283 - custom_mae: 13.3593
+Epoch 00030: val_custom_mae improved from 14.10527 to 13.40527, saving model to ..\fast_output\SYNTH_Regression_MSE\201019_2253_final_Angular_Top_1_Custom-MAE\Synth_TD\CNN_Base_32_Model_and_Weights_80000.hdf5
+2500/2500 [==============================] - 846s 338ms/step - loss: 788.2838 - custom_mae: 13.3595 - val_loss: 822.0886 - val_custom_mae: 13.4053
+Epoch 31/400
+2499/2500 [============================>.] - ETA: 0s - loss: 768.8329 - custom_mae: 13.2020
+Epoch 00031: val_custom_mae did not improve from 13.40527
+2500/2500 [==============================] - 842s 337ms/step - loss: 769.2847 - custom_mae: 13.2055 - val_loss: 820.5020 - val_custom_mae: 13.6362
+Epoch 32/400
+2499/2500 [============================>.] - ETA: 0s - loss: 755.4011 - custom_mae: 13.0186
+Epoch 00032: val_custom_mae did not improve from 13.40527
+2500/2500 [==============================] - 837s 335ms/step - loss: 755.3729 - custom_mae: 13.0186 - val_loss: 820.7767 - val_custom_mae: 13.4099
+Epoch 33/400
+
+2499/2500 [============================>.] - ETA: 0s - loss: 753.0564 - custom_mae: 12.9438
+Epoch 00033: val_custom_mae did not improve from 13.40527
+2500/2500 [==============================] - 840s 336ms/step - loss: 753.2048 - custom_mae: 12.9447 - val_loss: 835.3877 - val_custom_mae: 13.5287
+Epoch 34/400
+2499/2500 [============================>.] - ETA: 0s - loss: 740.5243 - custom_mae: 12.8132
+Epoch 00034: val_custom_mae did not improve from 13.40527
+2500/2500 [==============================] - 839s 336ms/step - loss: 740.5021 - custom_mae: 12.8136 - val_loss: 832.8458 - val_custom_mae: 13.4188
+Epoch 35/400
+2499/2500 [============================>.] - ETA: 0s - loss: 732.6104 - custom_mae: 12.6222
+Epoch 00035: val_custom_mae improved from 13.40527 to 13.19434, saving model to ..\fast_output\SYNTH_Regression_MSE\201019_2253_final_Angular_Top_1_Custom-MAE\Synth_TD\CNN_Base_32_Model_and_Weights_80000.hdf5
+2500/2500 [==============================] - 843s 337ms/step - loss: 732.6609 - custom_mae: 12.6233 - val_loss: 817.6516 - val_custom_mae: 13.1943
+Epoch 36/400
+2499/2500 [============================>.] - ETA: 0s - loss: 718.5687 - custom_mae: 12.4630
+Epoch 00036: val_custom_mae improved from 13.19434 to 12.72493, saving model to ..\fast_output\SYNTH_Regression_MSE\201019_2253_final_Angular_Top_1_Custom-MAE\Synth_TD\CNN_Base_32_Model_and_Weights_80000.hdf5
+2500/2500 [==============================] - 846s 338ms/step - loss: 718.5580 - custom_mae: 12.4629 - val_loss: 782.3988 - val_custom_mae: 12.7249
+Epoch 37/400
+2499/2500 [============================>.] - ETA: 0s - loss: 707.8276 - custom_mae: 12.3798
+Epoch 00037: val_custom_mae did not improve from 12.72493
+2500/2500 [==============================] - 842s 337ms/step - loss: 707.7509 - custom_mae: 12.3789 - val_loss: 801.6889 - val_custom_mae: 13.3230
+Epoch 38/400
+2499/2500 [============================>.] - ETA: 0s - loss: 698.5036 - custom_mae: 12.2562
+Epoch 00038: val_custom_mae improved from 12.72493 to 12.42332, saving model to ..\fast_output\SYNTH_Regression_MSE\201019_2253_final_Angular_Top_1_Custom-MAE\Synth_TD\CNN_Base_32_Model_and_Weights_80000.hdf5
+2500/2500 [==============================] - 846s 338ms/step - loss: 698.3616 - custom_mae: 12.2558 - val_loss: 765.5834 - val_custom_mae: 12.4233
+Epoch 39/400
+2499/2500 [============================>.] - ETA: 0s - loss: 695.7859 - custom_mae: 12.1618- ETA: 7s - loss: 695.887
+Epoch 00039: val_custom_mae did not improve from 12.42332
+2500/2500 [==============================] - 841s 336ms/step - loss: 695.6583 - custom_mae: 12.1610 - val_loss: 857.9580 - val_custom_mae: 13.4578
+Epoch 40/400
+2499/2500 [============================>.] - ETA: 0s - loss: 688.7541 - custom_mae: 12.0236
+Epoch 00040: val_custom_mae improved from 12.42332 to 12.36517, saving model to ..\fast_output\SYNTH_Regression_MSE\201019_2253_final_Angular_Top_1_Custom-MAE\Synth_TD\CNN_Base_32_Model_and_Weights_80000.hdf5
+2500/2500 [==============================] - 844s 338ms/step - loss: 688.6142 - custom_mae: 12.0222 - val_loss: 764.7545 - val_custom_mae: 12.3652
+Epoch 41/400
+2499/2500 [============================>.] - ETA: 0s - loss: 679.8943 - custom_mae: 11.8856
+Epoch 00041: val_custom_mae did not improve from 12.36517
+2500/2500 [==============================] - 842s 337ms/step - loss: 679.7354 - custom_mae: 11.8847 - val_loss: 753.9511 - val_custom_mae: 12.4021
+Epoch 42/400
+2499/2500 [============================>.] - ETA: 0s - loss: 666.7670 - custom_mae: 11.7886
+Epoch 00042: val_custom_mae improved from 12.36517 to 12.17384, saving model to ..\fast_output\SYNTH_Regression_MSE\201019_2253_final_Angular_Top_1_Custom-MAE\Synth_TD\CNN_Base_32_Model_and_Weights_80000.hdf5
+2500/2500 [==============================] - 850s 340ms/step - loss: 666.6941 - custom_mae: 11.7887 - val_loss: 732.2413 - val_custom_mae: 12.1738
+Epoch 43/400
+2499/2500 [============================>.] - ETA: 0s - loss: 661.3591 - custom_mae: 11.6818- ETA: 9s - loss: 662.1393 - cus - ETA: 3s - loss: 661.7676 - custom_m
+Epoch 00043: val_custom_mae improved from 12.17384 to 11.89441, saving model to ..\fast_output\SYNTH_Regression_MSE\201019_2253_final_Angular_Top_1_Custom-MAE\Synth_TD\CNN_Base_32_Model_and_Weights_80000.hdf5
+2500/2500 [==============================] - 850s 340ms/step - loss: 661.5045 - custom_mae: 11.6836 - val_loss: 739.6699 - val_custom_mae: 11.8944
+Epoch 44/400
+2499/2500 [============================>.] - ETA: 0s - loss: 658.3059 - custom_mae: 11.6006
+Epoch 00044: val_custom_mae did not improve from 11.89441
+2500/2500 [==============================] - 842s 337ms/step - loss: 658.2237 - custom_mae: 11.6004 - val_loss: 754.0045 - val_custom_mae: 12.2314
+Epoch 45/400
+2499/2500 [============================>.] - ETA: 0s - loss: 653.3060 - custom_mae: 11.5181
+Epoch 00045: val_custom_mae did not improve from 11.89441
+2500/2500 [==============================] - 843s 337ms/step - loss: 653.2459 - custom_mae: 11.5177 - val_loss: 740.9977 - val_custom_mae: 11.9766
+Epoch 46/400
+2499/2500 [============================>.] - ETA: 0s - loss: 644.2110 - custom_mae: 11.4114
+Epoch 00046: val_custom_mae did not improve from 11.89441
+2500/2500 [==============================] - 846s 338ms/step - loss: 644.0869 - custom_mae: 11.4109 - val_loss: 774.1218 - val_custom_mae: 12.0318
+Epoch 47/400
+2499/2500 [============================>.] - ETA: 0s - loss: 645.5702 - custom_mae: 11.3436
+Epoch 00047: val_custom_mae improved from 11.89441 to 11.66990, saving model to ..\fast_output\SYNTH_Regression_MSE\201019_2253_final_Angular_Top_1_Custom-MAE\Synth_TD\CNN_Base_32_Model_and_Weights_80000.hdf5
+2500/2500 [==============================] - 860s 344ms/step - loss: 645.6934 - custom_mae: 11.3438 - val_loss: 718.5264 - val_custom_mae: 11.6699
+Epoch 48/400
+2499/2500 [============================>.] - ETA: 0s - loss: 626.9536 - custom_mae: 11.1935
+Epoch 00048: val_custom_mae did not improve from 11.66990
+2500/2500 [==============================] - 851s 340ms/step - loss: 626.8454 - custom_mae: 11.1931 - val_loss: 730.2055 - val_custom_mae: 11.7515
+Epoch 49/400
+2499/2500 [============================>.] - ETA: 0s - loss: 629.7194 - custom_mae: 11.1564
+Epoch 00049: val_custom_mae improved from 11.66990 to 11.26959, saving model to ..\fast_output\SYNTH_Regression_MSE\201019_2253_final_Angular_Top_1_Custom-MAE\Synth_TD\CNN_Base_32_Model_and_Weights_80000.hdf5
+2500/2500 [==============================] - 851s 340ms/step - loss: 629.6031 - custom_mae: 11.1556 - val_loss: 696.4306 - val_custom_mae: 11.2696
+Epoch 50/400
+2499/2500 [============================>.] - ETA: 0s - loss: 621.2428 - custom_mae: 11.0082
+Epoch 00050: val_custom_mae did not improve from 11.26959
+2500/2500 [==============================] - 842s 337ms/step - loss: 621.2537 - custom_mae: 11.0085 - val_loss: 712.7932 - val_custom_mae: 11.5742
+Epoch 51/400
+2499/2500 [============================>.] - ETA: 0s - loss: 618.1692 - custom_mae: 10.9563
+Epoch 00051: val_custom_mae improved from 11.26959 to 11.17715, saving model to ..\fast_output\SYNTH_Regression_MSE\201019_2253_final_Angular_Top_1_Custom-MAE\Synth_TD\CNN_Base_32_Model_and_Weights_80000.hdf5
+2500/2500 [==============================] - 848s 339ms/step - loss: 618.2420 - custom_mae: 10.9562 - val_loss: 678.7577 - val_custom_mae: 11.1772
+Epoch 52/400
+2499/2500 [============================>.] - ETA: 0s - loss: 614.0573 - custom_mae: 10.8667
+Epoch 00052: val_custom_mae did not improve from 11.17715
+2500/2500 [==============================] - 842s 337ms/step - loss: 613.9720 - custom_mae: 10.8661 - val_loss: 697.6620 - val_custom_mae: 11.2525
+Epoch 53/400
+2499/2500 [============================>.] - ETA: 0s - loss: 603.8776 - custom_mae: 10.8153
+Epoch 00053: val_custom_mae improved from 11.17715 to 11.08272, saving model to ..\fast_output\SYNTH_Regression_MSE\201019_2253_final_Angular_Top_1_Custom-MAE\Synth_TD\CNN_Base_32_Model_and_Weights_80000.hdf5
+2500/2500 [==============================] - 841s 337ms/step - loss: 603.6971 - custom_mae: 10.8141 - val_loss: 677.2654 - val_custom_mae: 11.0827
+Epoch 54/400
+2499/2500 [============================>.] - ETA: 0s - loss: 600.4489 - custom_mae: 10.6904
+Epoch 00054: val_custom_mae improved from 11.08272 to 10.99960, saving model to ..\fast_output\SYNTH_Regression_MSE\201019_2253_final_Angular_Top_1_Custom-MAE\Synth_TD\CNN_Base_32_Model_and_Weights_80000.hdf5
+2500/2500 [==============================] - 847s 339ms/step - loss: 600.3720 - custom_mae: 10.6900 - val_loss: 682.6778 - val_custom_mae: 10.9996
+Epoch 55/400
+2499/2500 [============================>.] - ETA: 0s - loss: 602.4941 - custom_mae: 10.6985
+Epoch 00055: val_custom_mae did not improve from 10.99960
+2500/2500 [==============================] - 840s 336ms/step - loss: 602.4686 - custom_mae: 10.6979 - val_loss: 698.7652 - val_custom_mae: 11.3127
+Epoch 56/400
+2499/2500 [============================>.] - ETA: 0s - loss: 593.3480 - custom_mae: 10.6102
+Epoch 00056: val_custom_mae improved from 10.99960 to 10.90787, saving model to ..\fast_output\SYNTH_Regression_MSE\201019_2253_final_Angular_Top_1_Custom-MAE\Synth_TD\CNN_Base_32_Model_and_Weights_80000.hdf5
+2500/2500 [==============================] - 845s 338ms/step - loss: 593.3352 - custom_mae: 10.6100 - val_loss: 665.9633 - val_custom_mae: 10.9079
+Epoch 57/400
+2499/2500 [============================>.] - ETA: 0s - loss: 591.2187 - custom_mae: 10.5224
+Epoch 00057: val_custom_mae improved from 10.90787 to 10.86175, saving model to ..\fast_output\SYNTH_Regression_MSE\201019_2253_final_Angular_Top_1_Custom-MAE\Synth_TD\CNN_Base_32_Model_and_Weights_80000.hdf5
+2500/2500 [==============================] - 842s 337ms/step - loss: 591.1374 - custom_mae: 10.5217 - val_loss: 667.8588 - val_custom_mae: 10.8617
+Epoch 58/400
+2499/2500 [============================>.] - ETA: 0s - loss: 585.3507 - custom_mae: 10.4682
+Epoch 00058: val_custom_mae improved from 10.86175 to 10.69172, saving model to ..\fast_output\SYNTH_Regression_MSE\201019_2253_final_Angular_Top_1_Custom-MAE\Synth_TD\CNN_Base_32_Model_and_Weights_80000.hdf5
+2500/2500 [==============================] - 843s 337ms/step - loss: 585.4166 - custom_mae: 10.4689 - val_loss: 655.9344 - val_custom_mae: 10.6917
+Epoch 59/400
+2499/2500 [============================>.] - ETA: 0s - loss: 577.3533 - custom_mae: 10.4174
+Epoch 00059: val_custom_mae did not improve from 10.69172
+2500/2500 [==============================] - 839s 336ms/step - loss: 577.2785 - custom_mae: 10.4174 - val_loss: 684.4657 - val_custom_mae: 10.7760
+Epoch 60/400
+2499/2500 [============================>.] - ETA: 0s - loss: 582.7703 - custom_mae: 10.3596
+Epoch 00060: val_custom_mae did not improve from 10.69172
+2500/2500 [==============================] - 839s 335ms/step - loss: 582.5686 - custom_mae: 10.3580 - val_loss: 670.8285 - val_custom_mae: 10.7348
+Epoch 61/400
+2499/2500 [============================>.] - ETA: 0s - loss: 574.0742 - custom_mae: 10.2941
+Epoch 00061: val_custom_mae did not improve from 10.69172
+2500/2500 [==============================] - 838s 335ms/step - loss: 574.0766 - custom_mae: 10.2942 - val_loss: 654.1757 - val_custom_mae: 10.7739
+Epoch 62/400
+2499/2500 [============================>.] - ETA: 0s - loss: 565.7085 - custom_mae: 10.2255
+Epoch 00062: val_custom_mae did not improve from 10.69172
+2500/2500 [==============================] - 837s 335ms/step - loss: 565.7691 - custom_mae: 10.2259 - val_loss: 664.4868 - val_custom_mae: 11.1916
+Epoch 63/400
+2499/2500 [============================>.] - ETA: 0s - loss: 569.9482 - custom_mae: 10.1473
+Epoch 00063: val_custom_mae did not improve from 10.69172
+2500/2500 [==============================] - 839s 336ms/step - loss: 570.1319 - custom_mae: 10.1492 - val_loss: 732.9470 - val_custom_mae: 10.7531
+Epoch 64/400
+2499/2500 [============================>.] - ETA: 0s - loss: 558.5518 - custom_mae: 10.0643
+Epoch 00064: val_custom_mae improved from 10.69172 to 10.24055, saving model to ..\fast_output\SYNTH_Regression_MSE\201019_2253_final_Angular_Top_1_Custom-MAE\Synth_TD\CNN_Base_32_Model_and_Weights_80000.hdf5
+2500/2500 [==============================] - 845s 338ms/step - loss: 558.5625 - custom_mae: 10.0639 - val_loss: 654.5357 - val_custom_mae: 10.2405
+Epoch 65/400
+2499/2500 [============================>.] - ETA: 0s - loss: 558.2537 - custom_mae: 10.0281
+Epoch 00065: val_custom_mae did not improve from 10.24055
+2500/2500 [==============================] - 842s 337ms/step - loss: 558.0738 - custom_mae: 10.0269 - val_loss: 638.2771 - val_custom_mae: 10.3035
+Epoch 66/400
+2499/2500 [============================>.] - ETA: 0s - loss: 558.1924 - custom_mae: 9.9971
+Epoch 00066: val_custom_mae did not improve from 10.24055
+2500/2500 [==============================] - 839s 335ms/step - loss: 558.1208 - custom_mae: 9.9968 - val_loss: 625.0148 - val_custom_mae: 10.3933
+Epoch 67/400
+2499/2500 [============================>.] - ETA: 0s - loss: 558.1052 - custom_mae: 9.9587
+Epoch 00067: val_custom_mae improved from 10.24055 to 10.19465, saving model to ..\fast_output\SYNTH_Regression_MSE\201019_2253_final_Angular_Top_1_Custom-MAE\Synth_TD\CNN_Base_32_Model_and_Weights_80000.hdf5
+2500/2500 [==============================] - 849s 340ms/step - loss: 558.0219 - custom_mae: 9.9580 - val_loss: 623.6428 - val_custom_mae: 10.1946
+Epoch 68/400
+2499/2500 [============================>.] - ETA: 0s - loss: 548.6394 - custom_mae: 9.8476
+Epoch 00068: val_custom_mae did not improve from 10.19465
+2500/2500 [==============================] - 843s 337ms/step - loss: 548.4578 - custom_mae: 9.8465 - val_loss: 659.7483 - val_custom_mae: 10.4989
+Epoch 69/400
+2499/2500 [============================>.] - ETA: 0s - loss: 551.7648 - custom_mae: 9.8625
+Epoch 00069: val_custom_mae did not improve from 10.19465
+2500/2500 [==============================] - 841s 336ms/step - loss: 551.8013 - custom_mae: 9.8625 - val_loss: 644.2354 - val_custom_mae: 10.2339
+Epoch 70/400
+2499/2500 [============================>.] - ETA: 0s - loss: 543.6179 - custom_mae: 9.7360 ETA: 1s - loss: 543.6459 - custom_mae
+Epoch 00070: val_custom_mae did not improve from 10.19465
+2500/2500 [==============================] - 840s 336ms/step - loss: 543.8571 - custom_mae: 9.7369 - val_loss: 697.7044 - val_custom_mae: 10.4211
+Epoch 71/400
+2499/2500 [============================>.] - ETA: 0s - loss: 540.5567 - custom_mae: 9.7234
+Epoch 00071: val_custom_mae improved from 10.19465 to 10.16094, saving model to ..\fast_output\SYNTH_Regression_MSE\201019_2253_final_Angular_Top_1_Custom-MAE\Synth_TD\CNN_Base_32_Model_and_Weights_80000.hdf5
+
+---------------------------------------------------------------------------
+MemoryError                               Traceback (most recent call last)
+<ipython-input-18-5a0825006cfa> in <module>
+     26             disable_progress_bar = False,
+     27             print_params = True,
+---> 28             clear_session = True
+     29         )
+     30 
+
+D:\anaconda\envs\tf_ks\lib\site-packages\talos\scan\Scan.py in __init__(self, x, y, params, model, experiment_name, x_val, y_val, val_split, random_method, seed, performance_target, fraction_limit, round_limit, time_limit, boolean_limit, reduction_method, reduction_interval, reduction_window, reduction_threshold, reduction_metric, minimize_loss, disable_progress_bar, print_params, clear_session, save_weights)
+    194         # start runtime
+    195         from .scan_run import scan_run
+--> 196         scan_run(self)
+
+D:\anaconda\envs\tf_ks\lib\site-packages\talos\scan\scan_run.py in scan_run(self)
+     24         # otherwise proceed with next permutation
+     25         from .scan_round import scan_round
+---> 26         self = scan_round(self)
+     27         self.pbar.update(1)
+     28 
+
+D:\anaconda\envs\tf_ks\lib\site-packages\talos\scan\scan_round.py in scan_round(self)
+     17     # fit the model
+     18     from ..model.ingest_model import ingest_model
+---> 19     self.model_history, self.round_model = ingest_model(self)
+     20     self.round_history.append(self.model_history.history)
+     21 
+
+D:\anaconda\envs\tf_ks\lib\site-packages\talos\model\ingest_model.py in ingest_model(self)
+      8                       self.x_val,
+      9                       self.y_val,
+---> 10                       self.round_params)
+
+<ipython-input-11-f963f301abeb> in grid_model_fine(x, y, x_val, y_val, params)
+    116         callbacks = [checkpointer, csv_logger, lr_reducer, early_stopper],
+    117         epochs = params['epochs'],
+--> 118         workers = 8
+    119     )
+    120 
+
+D:\anaconda\envs\tf_ks\lib\site-packages\tensorflow_core\python\keras\engine\training.py in fit(self, x, y, batch_size, epochs, verbose, callbacks, validation_split, validation_data, shuffle, class_weight, sample_weight, initial_epoch, steps_per_epoch, validation_steps, validation_freq, max_queue_size, workers, use_multiprocessing, **kwargs)
+    817         max_queue_size=max_queue_size,
+    818         workers=workers,
+--> 819         use_multiprocessing=use_multiprocessing)
+    820 
+    821   def evaluate(self,
+
+D:\anaconda\envs\tf_ks\lib\site-packages\tensorflow_core\python\keras\engine\training_v2.py in fit(self, model, x, y, batch_size, epochs, verbose, callbacks, validation_split, validation_data, shuffle, class_weight, sample_weight, initial_epoch, steps_per_epoch, validation_steps, validation_freq, max_queue_size, workers, use_multiprocessing, **kwargs)
+    395                       total_epochs=1)
+    396                   cbks.make_logs(model, epoch_logs, eval_result, ModeKeys.TEST,
+--> 397                                  prefix='val_')
+    398 
+    399     return model.history
+
+D:\anaconda\envs\tf_ks\lib\contextlib.py in __exit__(self, type, value, traceback)
+    117         if type is None:
+    118             try:
+--> 119                 next(self.gen)
+    120             except StopIteration:
+    121                 return False
+
+D:\anaconda\envs\tf_ks\lib\site-packages\tensorflow_core\python\keras\engine\training_v2.py in on_epoch(self, epoch, mode)
+    769       if mode == ModeKeys.TRAIN:
+    770         # Epochs only apply to `fit`.
+--> 771         self.callbacks.on_epoch_end(epoch, epoch_logs)
+    772       self.progbar.on_epoch_end(epoch, epoch_logs)
+    773 
+
+D:\anaconda\envs\tf_ks\lib\site-packages\tensorflow_core\python\keras\callbacks.py in on_epoch_end(self, epoch, logs)
+    300     logs = logs or {}
+    301     for callback in self.callbacks:
+--> 302       callback.on_epoch_end(epoch, logs)
+    303 
+    304   def on_train_batch_begin(self, batch, logs=None):
+
+D:\anaconda\envs\tf_ks\lib\site-packages\tensorflow_core\python\keras\callbacks.py in on_epoch_end(self, epoch, logs)
+    990           self._save_model(epoch=epoch, logs=logs)
+    991       else:
+--> 992         self._save_model(epoch=epoch, logs=logs)
+    993     if self.model._in_multi_worker_mode():
+    994       # For multi-worker training, back up the weights and current training
+
+D:\anaconda\envs\tf_ks\lib\site-packages\tensorflow_core\python\keras\callbacks.py in _save_model(self, epoch, logs)
+   1027                 self.model.save_weights(filepath, overwrite=True)
+   1028               else:
+-> 1029                 self.model.save(filepath, overwrite=True)
+   1030             else:
+   1031               if self.verbose > 0:
+
+D:\anaconda\envs\tf_ks\lib\site-packages\tensorflow_core\python\keras\engine\network.py in save(self, filepath, overwrite, include_optimizer, save_format, signatures, options)
+   1006     """
+   1007     save.save_model(self, filepath, overwrite, include_optimizer, save_format,
+-> 1008                     signatures, options)
+   1009 
+   1010   def save_weights(self, filepath, overwrite=True, save_format=None):
+
+D:\anaconda\envs\tf_ks\lib\site-packages\tensorflow_core\python\keras\saving\save.py in save_model(model, filepath, overwrite, include_optimizer, save_format, signatures, options)
+    110           'or using `save_weights`.')
+    111     hdf5_format.save_model_to_hdf5(
+--> 112         model, filepath, overwrite, include_optimizer)
+    113   else:
+    114     saved_model_save.save(model, filepath, overwrite, include_optimizer,
+
+D:\anaconda\envs\tf_ks\lib\site-packages\tensorflow_core\python\keras\saving\hdf5_format.py in save_model_to_hdf5(model, filepath, overwrite, include_optimizer)
+    113     if (include_optimizer and model.optimizer and
+    114         not isinstance(model.optimizer, optimizers.TFOptimizer)):
+--> 115       save_optimizer_weights_to_hdf5_group(f, model.optimizer)
+    116 
+    117     f.flush()
+
+D:\anaconda\envs\tf_ks\lib\site-packages\tensorflow_core\python\keras\saving\hdf5_format.py in save_optimizer_weights_to_hdf5_group(hdf5_group, optimizer)
+    582     weight_names = [str(w.name).encode('utf8') for w in symbolic_weights]
+    583     save_attributes_to_hdf5_group(weights_group, 'weight_names', weight_names)
+--> 584     weight_values = K.batch_get_value(symbolic_weights)
+    585     for name, val in zip(weight_names, weight_values):
+    586       param_dset = weights_group.create_dataset(
+
+D:\anaconda\envs\tf_ks\lib\site-packages\tensorflow_core\python\keras\backend.py in batch_get_value(tensors)
+   3268   """
+   3269   if context.executing_eagerly():
+-> 3270     return [x.numpy() for x in tensors]
+   3271   elif ops.inside_function():  # pylint: disable=protected-access
+   3272     raise RuntimeError('Cannot get value inside Tensorflow graph function.')
+
+D:\anaconda\envs\tf_ks\lib\site-packages\tensorflow_core\python\keras\backend.py in <listcomp>(.0)
+   3268   """
+   3269   if context.executing_eagerly():
+-> 3270     return [x.numpy() for x in tensors]
+   3271   elif ops.inside_function():  # pylint: disable=protected-access
+   3272     raise RuntimeError('Cannot get value inside Tensorflow graph function.')
+
+D:\anaconda\envs\tf_ks\lib\site-packages\tensorflow_core\python\ops\resource_variable_ops.py in numpy(self)
+    580   def numpy(self):
+    581     if context.executing_eagerly():
+--> 582       return self.read_value().numpy()
+    583     raise NotImplementedError(
+    584         "numpy() is only available when eager execution is enabled.")
+
+D:\anaconda\envs\tf_ks\lib\site-packages\tensorflow_core\python\framework\ops.py in numpy(self)
+    941     # TODO(slebedev): Consider avoiding a copy for non-CPU or remote tensors.
+    942     maybe_arr = self._numpy()  # pylint: disable=protected-access
+--> 943     return maybe_arr.copy() if isinstance(maybe_arr, np.ndarray) else maybe_arr
+    944 
+    945   @property
+
+MemoryError: Unable to allocate 392. MiB for an array with shape (25088, 4096) and data type float32
+
