@@ -1,0 +1,6 @@
+round_epochs,loss,custom_mae,val_loss,val_custom_mae,activation,batch_size,dropout,epochs,first_neuron,hidden_layers,label_type,loss_function,lr,monitor_value,optimizer,reduction_metric,samples
+1,3799.5094479980467,39.04887,2938.1040302734373,31.90724,leakyrelu,32,0.25,1,1024,0,Angular,mean_squared_error,1,val_custom_mae,<class 'tensorflow.python.keras.optimizer_v2.adam.Adam'>,custom_mae,20000
+1,3710.9920034179686,38.433426,3080.801419921875,32.61966,leakyrelu,32,0.25,1,1024,0,Angular,mean_squared_error,2,val_custom_mae,<class 'tensorflow.python.keras.optimizer_v2.adam.Adam'>,custom_mae,20000
+1,3807.3086424560547,38.668716,2886.1211962890625,30.901876,leakyrelu,32,0.25,1,1024,0,Angular,mean_squared_error,5,val_custom_mae,<class 'tensorflow.python.keras.optimizer_v2.adam.Adam'>,custom_mae,20000
+1,3966.9971704101563,40.75506,2944.079005859375,32.05215,leakyrelu,32,0.25,1,1024,1,Angular,mean_squared_error,1,val_custom_mae,<class 'tensorflow.python.keras.optimizer_v2.adam.Adam'>,custom_mae,20000
+1,3924.475648925781,40.54535,2620.767330078125,29.609596,leakyrelu,32,0.25,1,1024,1,Angular,mean_squared_error,2,val_custom_mae,<class 'tensorflow.python.keras.optimizer_v2.adam.Adam'>,custom_mae,20000

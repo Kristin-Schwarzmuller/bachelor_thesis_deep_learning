@@ -1,0 +1,5 @@
+round_epochs,val_loss,val_mean_absolut_error,loss,mean_absolut_error,activation,batch_size,dropout,epochs,first_neuron,hidden_layers,leaky_alpha,lr,optimizer,samples
+1,6410.75390625,48.59379196166992,6079.721112792969,53.67688,leakyrelu,32,0.25,1,1024,0,0.1,1,<class 'tensorflow.python.keras.optimizer_v2.adam.Adam'>,20000
+1,4960.7509765625,46.97290802001953,7240.558884765625,56.385914,leakyrelu,32,0.25,1,1024,0,0.1,2,<class 'tensorflow.python.keras.optimizer_v2.adam.Adam'>,20000
+1,5572.859375,51.08855056762695,31789.1846875,90.90045,leakyrelu,32,0.25,1,1024,0,0.1,5,<class 'tensorflow.python.keras.optimizer_v2.adam.Adam'>,20000
+1,4760.46728515625,53.695377349853516,6323.205950195313,54.44103,leakyrelu,32,0.25,1,1024,1,0.1,1,<class 'tensorflow.python.keras.optimizer_v2.adam.Adam'>,20000
