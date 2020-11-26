@@ -1,0 +1,17 @@
+round_epochs,val_loss,val_mean_absolut_error,loss,mean_absolut_error,activation,batch_size,dropout,epochs,first_neuron,hidden_layers,leaky_alpha,lr,optimizer,samples
+1,6171.85888671875,52.8724365234375,24839.07511279297,84.64047,leakyrelu,32,0.25,1,1024,1,0.1,5,<class 'tensorflow.python.keras.optimizer_v2.adam.Adam'>,20000
+1,5526.26953125,52.57475662231445,33297.21074658203,95.332794,leakyrelu,32,0.25,1,2048,1,0.1,5,<class 'tensorflow.python.keras.optimizer_v2.adam.Adam'>,20000
+1,5360.6357421875,48.930179595947266,30199.231736328125,92.01715,leakyrelu,32,0.5,1,1024,1,0.1,5,<class 'tensorflow.python.keras.optimizer_v2.adam.Adam'>,20000
+1,5654.89306640625,52.96021270751953,42097.68014453125,98.07299,leakyrelu,32,0.5,1,2048,1,0.1,5,<class 'tensorflow.python.keras.optimizer_v2.adam.Adam'>,20000
+1,6934.03466796875,67.63890838623047,66078.78771289063,104.55213,leakyrelu,64,0.25,1,1024,1,0.1,5,<class 'tensorflow.python.keras.optimizer_v2.adam.Adam'>,20000
+1,9287.966796875,82.88782501220703,77742.94618554687,104.65693,leakyrelu,64,0.25,1,2048,1,0.1,5,<class 'tensorflow.python.keras.optimizer_v2.adam.Adam'>,20000
+1,8525.8017578125,63.90129852294922,78308.58487695313,111.06652,leakyrelu,64,0.5,1,1024,1,0.1,5,<class 'tensorflow.python.keras.optimizer_v2.adam.Adam'>,20000
+1,8276.689453125,72.30799102783203,72174.86465820312,109.01895,leakyrelu,64,0.5,1,2048,1,0.1,5,<class 'tensorflow.python.keras.optimizer_v2.adam.Adam'>,20000
+1,7153.39453125,64.56360626220703,48579.59436328125,85.79191,relu,32,0.25,1,1024,1,0.1,5,<class 'tensorflow.python.keras.optimizer_v2.adam.Adam'>,20000
+1,23089.84375,112.66312408447266,32850.82521484375,116.50124,relu,32,0.25,1,2048,1,0.1,5,<class 'tensorflow.python.keras.optimizer_v2.adam.Adam'>,20000
+1,23089.84375,112.66312408447266,44414.04248828125,117.914345,relu,32,0.5,1,1024,1,0.1,5,<class 'tensorflow.python.keras.optimizer_v2.adam.Adam'>,20000
+1,23089.84375,112.66312408447266,28427.1160625,115.37657,relu,32,0.5,1,2048,1,0.1,5,<class 'tensorflow.python.keras.optimizer_v2.adam.Adam'>,20000
+1,7881.345703125,63.45403289794922,106018.91778710937,92.666016,relu,64,0.25,1,1024,1,0.1,5,<class 'tensorflow.python.keras.optimizer_v2.adam.Adam'>,20000
+1,8173.162109375,69.42113494873047,131548.2677558594,96.220406,relu,64,0.25,1,2048,1,0.1,5,<class 'tensorflow.python.keras.optimizer_v2.adam.Adam'>,20000
+1,6614.7490234375,66.53469848632812,138430.52402539062,89.963,relu,64,0.5,1,1024,1,0.1,5,<class 'tensorflow.python.keras.optimizer_v2.adam.Adam'>,20000
+1,8902.34375,71.33772277832031,103938.66367578125,103.54113,relu,64,0.5,1,2048,1,0.1,5,<class 'tensorflow.python.keras.optimizer_v2.adam.Adam'>,20000
