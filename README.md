@@ -63,6 +63,6 @@ width="500"/>
 ### 5_Graphical_Evaluation_Box_Whisker_Plot.ipynb
 Graphic processing of the results for better comparability 
 
-<img src="https://gitlab.lrz.de/mm_promotion/theses/kristin_schwarzmueller/deep_learning/-/blob/master/images/Boxplot(2).png" 
+<img src="https://gitlab.lrz.de/mm_promotion/theses/kristin_schwarzmueller/deep_learning/-/blob/master/images/Boxplot_2_.png" 
 alt="Box Whisker Plot" 
 width="700"/>
