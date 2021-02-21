@@ -12,7 +12,7 @@ The used data held the output direction in spherical coordinates but other coord
 alt="RGB image of an Buddha" 
 width="300"/>
 <img src="https://gitlab.lrz.de/mm_promotion/theses/kristin_schwarzmueller/deep_learning/-/blob/master/images/rgb/bunny00043910-0-30-315-45.png" 
-alt="RGB image of an Buddha" 
+alt="RGB image of an Bunny" 
 width="300"/>
 
 **Exaple RGBD images  with the light direction: azimuth = 315° and elevation = 45°**
@@ -21,7 +21,7 @@ width="300"/>
 alt="RGBD image of an Buddha" 
 width="300"/>
 <img src="https://gitlab.lrz.de/mm_promotion/theses/kristin_schwarzmueller/deep_learning/-/blob/master/images/rgba/bunny00043910-0-30-315-45.png" 
-alt="RGBD image of an Buddha" 
+alt="RGBD image of an Bunny" 
 width="300"/>
 
 
@@ -57,7 +57,7 @@ alt="Historam of angualr estiamtion error of the ResNet50 on RGB images"
 width="500"/>
 
 <img src="https://gitlab.lrz.de/mm_promotion/theses/kristin_schwarzmueller/deep_learning/-/blob/master/images/RESNET_RGBD_hist(1).png" 
-alt="Historam of angualr estiamtion error of the ResNet50 on RGB-D images" 
+alt="Historam of angualr estiamtion error of the ResNet50 on RGBD images" 
 width="500"/>
 
 ### 5_Graphical_Evaluation_Box_Whisker_Plot.ipynb
