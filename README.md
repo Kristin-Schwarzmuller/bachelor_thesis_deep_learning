@@ -8,7 +8,7 @@ The used data held the output direction in spherical coordinates but other coord
 
 **Exaple RGB images  with the light direction: azimuth = 315° and elevation = 45°** 
 
-<img src="https://github.com/MolineraNegra/thesis_deep_learning/tree/master/images/rgb/buddha00002438-0-30-315-45.png" 
+<img src="https://github.com/MolineraNegra/thesis_deep_learning/blob/master/images/rgb/buddha00002438-0-30-315-45.png" 
 alt="RGB image of an Buddha" 
 width="300"/>
 <img src="https://github.com/MolineraNegra/thesis_deep_learning/tree/master/images/rgb/bunny00043910-0-30-315-45.png" 
