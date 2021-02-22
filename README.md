@@ -52,17 +52,17 @@ Test on 1000 images and calculation of the mean angular estimation error of the 
 Statistical tests that the difference between the models trained on RGB images is slightly better than RGB-D images but the effect size is neglectable. 
 Distribution of the angular estiamtion error of the ResNet50 on RGB and RGBD images. The blue lines and the µ value show the mean significaltlly differ: 
 
-<img src="https://github.com/MolineraNegra/thesis_deep_learning/tree/master/images/ResNet_RGB_hist(1).png" 
+<img src="https://github.com/MolineraNegra/thesis_deep_learning/blob/master/images/ResNet_RGB_hist(1).png" 
 alt="Historam of angualr estiamtion error of the ResNet50 on RGB images" 
 width="500"/>
 
-<img src="https://github.com/MolineraNegra/thesis_deep_learning/tree/master/images/RESNET_RGBD_hist(1).png" 
+<img src="https://github.com/MolineraNegra/thesis_deep_learning/blob/master/images/RESNET_RGBD_hist(1).png" 
 alt="Historam of angualr estiamtion error of the ResNet50 on RGBD images" 
 width="500"/>
 
 ### 5_Graphical_Evaluation_Box_Whisker_Plot.ipynb
 Graphic processing of the results for better comparability 
 
-<img src="https://github.com/MolineraNegra/thesis_deep_learning/tree/master/images/Boxplot_2_.png" 
+<img src="https://github.com/MolineraNegra/thesis_deep_learning/blob/master/images/Boxplot_2_.png" 
 alt="Box Whisker Plot" 
 width="700"/>
