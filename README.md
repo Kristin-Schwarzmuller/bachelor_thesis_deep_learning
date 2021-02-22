@@ -11,16 +11,16 @@ The used data held the output direction in spherical coordinates but other coord
 <img src="https://github.com/MolineraNegra/thesis_deep_learning/blob/master/images/rgb/buddha00002438-0-30-315-45.png" 
 alt="RGB image of an Buddha" 
 width="300"/>
-<img src="https://github.com/MolineraNegra/thesis_deep_learning/tree/master/images/rgb/bunny00043910-0-30-315-45.png" 
+<img src="https://github.com/MolineraNegra/thesis_deep_learning/blob/master/images/rgb/bunny00043910-0-30-315-45.png" 
 alt="RGB image of an Bunny" 
 width="300"/>
 
 **Exaple RGBD images  with the light direction: azimuth = 315° and elevation = 45°**
 
-<img src="https://github.com/MolineraNegra/thesis_deep_learning/tree/master/images/rgba/buddha00002438-0-30-315-45.png" 
+<img src="https://github.com/MolineraNegra/thesis_deep_learning/blob/master/images/rgba/buddha00002438-0-30-315-45.png" 
 alt="RGBD image of an Buddha" 
 width="300"/>
-<img src="https://github.com/MolineraNegra/thesis_deep_learning/tree/master/images/rgba/bunny00043910-0-30-315-45.png" 
+<img src="https://github.com/MolineraNegra/thesis_deep_learning/blob/master/images/rgba/bunny00043910-0-30-315-45.png" 
 alt="RGBD image of an Bunny" 
 width="300"/>
 
