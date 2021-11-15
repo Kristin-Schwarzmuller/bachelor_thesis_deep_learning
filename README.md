@@ -4,11 +4,12 @@ This repository contains the code to build convolutional neural networks (CNNs) 
 
 <img src="https://github.com/MolineraNegra/thesis_deep_learning/blob/master/images/AR.jpeg" 
 alt="Spherical Coordinate System" 
-width="500"/>
+width="300"/>
 
 **Note:** neither the input data nor the resulting models are contained in this repository as the is too storage-intensive.
 
 The data used kept the output direction in spherical coordinates. Compared to the standard Cartesian coordinate system, the spherical coordinate system offers the advantage of only two variables: the elevation θ (theta) and the azimuth Φ (phi). Since the light source is directional, the distance is negligible. 
+
 <img src="https://github.com/MolineraNegra/thesis_deep_learning/blob/master/images/spericalCoo.PNG" 
 alt="Spherical Coordinate System" 
 width="500"/>
