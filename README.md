@@ -1,10 +1,19 @@
 # ReadMe
 
-This repository contains the code to build convolutional neuronal networks (CNNs) with Keras and Tensorflow to predict the direction of a lights source from a single input picture. 
+This repository contains the code to build convolutional neural networks (CNNs) using Keras and Tensorflow to predict the direction of a light source from a single input image. The goal is to predict the direction of a light source to improve shadow fall and light reflections for augmented reality objects. The following images show an augmented box with a misallocated shadow compared to the point light and the other objects. 
+
+<img src="https://github.com/MolineraNegra/thesis_deep_learning/blob/master/images/AR.jpeg" 
+alt="Spherical Coordinate System" 
+width="500"/>
 
 **Note:** neither the input data nor the resulting models are contained in this repository as the is too storage-intensive.
 
-The used data held the output direction in spherical coordinates but other coordinate systems could be feasible, too. The used input data contained a simple scenario with one model in the centre of the image and one illuminating directional light source. The input images could either contain three input channels for red, green and blue (RGB) or four channels for RGB-Depth (RGBD) values. The resolution of the input images is 224x224. 
+The data used kept the output direction in spherical coordinates. Compared to the standard Cartesian coordinate system, the spherical coordinate system offers the advantage of only two variables: the elevation θ (theta) and the azimuth Φ (phi). Since the light source is directional, the distance is negligible. 
+<img src="https://github.com/MolineraNegra/thesis_deep_learning/blob/master/images/spericalCoo.PNG" 
+alt="Spherical Coordinate System" 
+width="500"/>
+
+The used input data contained a simple scenario with one model in the centre of the image and one illuminating directional light source. The input images could either contain three input channels for red, green and blue (RGB) or four channels for RGB-Depth (RGBD) values. The resolution of the input images is 224x224. 
 
 **Exaple RGB images  with the light direction: azimuth = 315° and elevation = 45°** 
 
