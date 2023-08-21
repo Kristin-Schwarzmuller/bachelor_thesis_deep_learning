@@ -1,20 +1,35 @@
 # ReadMe
 
-This repository contains the code to build convolutional neural networks (CNNs) using Keras and Tensorflow to predict the direction of a light source from a single input image. The goal is to predict the direction of a light source to improve shadow fall and light reflections for augmented reality objects. The following images show an augmented box with a misallocated shadow compared to the point light and the other objects. 
+## Table of Contents
+- [Introduction](#introduction)
+- [Data](#data)
+- [Models](#models)
+- [Results](#results)
+- [Scripts](#scripts)
+
+## Introduction
+
+This repository contains code for building convolutional neural networks (CNNs) using Keras and TensorFlow to predict the direction of a light source from a single input image. The goal is to predict the light source direction to improve shadow fall and light reflections for augmented reality objects. The following image shows an augmented box with a misallocated shadow compared to the point light and other objects.
 
 <img src="https://github.com/MolineraNegra/thesis_deep_learning/blob/master/images/AR.jpeg" 
 alt="Spherical Coordinate System" 
 width="300"/>
 
-**Note:** neither the input data nor the resulting models are contained in this repository as the is too storage-intensive.
+*Figure 1: Augmented Reality Image*
 
-The data used kept the output direction in spherical coordinates. Compared to the standard Cartesian coordinate system, the spherical coordinate system offers the advantage of only two variables: the elevation θ (theta) and the azimuth Φ (phi). Since the light source is directional, the distance is negligible. 
+**Note:** Neither the input data nor the resulting models are contained in this repository due to their storage-intensive nature.
+
+## Data
+
+The data used kept the output direction in spherical coordinates. The spherical coordinate system offers the advantage of using only two variables: the elevation θ (theta) and the azimuth Φ (phi). Since the light source is directional, the distance is negligible.
 
 <img src="https://github.com/MolineraNegra/thesis_deep_learning/blob/master/images/spericalCoo.PNG" 
 alt="Spherical Coordinate System" 
 width="500"/>
 
-The used input data contained a simple scenario with one model in the centre of the image and one illuminating directional light source. The input images could either contain three input channels for red, green and blue (RGB) or four channels for RGB-Depth (RGBD) values. The resolution of the input images is 224x224. 
+*Figure 2: Spherical Coordinate System*
+
+The input data contained a simple scenario with one model in the center of the image and an illuminating directional light source. The input images could either contain three input channels for red, green, and blue (RGB) or four channels for RGB-Depth (RGBD) values. The resolution of the input images is 224x224.
 
 **Exaple RGB images  with the light direction: azimuth = 315° and elevation = 45°** 
 
@@ -34,33 +49,15 @@ width="300"/>
 alt="RGBD image of an Bunny" 
 width="300"/>
 
+## Models
 
-The aim was to investigate whether the addition of the depth parameter produces a significant improvement. The findings of this study indicate that neural networks appear to favour RGB input information over RGB-D, for RGB-trained networks do not perform significantly worse than RGB-D-trained networks. Using networks that predict on RGB information allows the usage of more common, inexpensive hardware, as special camera devices to capture additional depth information is not required.
+### RGB vs. RGB-D Neural Networks
 
-The code is capable to optimize the hyperparameters and train three different net architectures: AlexNet, VGG16 and ResNet50. 
+Two different neural network models were trained and compared using RGB and RGB-Depth images. Surprisingly, no significant difference in performance was observed between the two models. Both models were trained and evaluated using the same framework and hyperparameters.
 
-**Note:** The code for the VGG16 is more detailed with more hyperparameter options as the model could not learn at the beginning of the study due to the vanishing gradient problem. By expanding the range of hyperparameters and adding various initialisation functions, the problem could be solved.
+## Results
 
-With two parameters in the class "global_parameter" the desired output model can be set:    
-   - net_architecture: 'ALEX' for the AlexNet, 'VGG16' or 'RESNET' for the ResNet50
-   - global.image_channels: 'rgb' or 'rgbd' 
-
-So in total six models where trained whereas the AlexNet had the worse performance and the VGG16 slightly outperformed the ResNet50. Against the initial assumption, the depth parameter did not lead to slightly worse results.
-
-The five Jupiter notebook scripts provide the following functionalities:
-
-### 1_full_HyperParaOpt.ipynb
-Trains a model with the selected net architecture and input channels on 20,000 images for one epoch on various hyperparameter combinations. A grid search over all hyperparameter combinations is proceeded by [Talos](https://github.com/autonomio/talos). By storing the mean absolute errors per model the optimal combination can be used for full training in the next script. 
-
-### 2_full_Training.ipynb 
-Full training of the selected net architecture and input channel with the best hyperparameter combination (= lowest mean absolute error during the hyperparameter optimization) on 100,000 images and for 400 epochs. If the model is better than all others before it is automatically saved. If no improvements can be achieved the learning rate is reduced after 13 epochs and after 20 epochs the training is stopped. 
-
-### 3_Graphical_Evaluation_Real_Single_Network_Data_Generation.ipynb
-Test on 1000 images and calculation of the mean angular estimation error of the selected net architecture and input channel.
-
-### 4_statistical_Tests.ipynb
-Statistical tests that the difference between the models trained on RGB images is slightly better than RGB-D images but the effect size is neglectable. 
-Distribution of the angular estiamtion error of the ResNet50 on RGB and RGBD images. The blue lines and the µ value show the mean significaltlly differ: 
+The aim was to investigate whether the addition of the depth parameter produces a significant improvement. The findings of this study indicate that neural networks appear to favor RGB input information over RGB-D. Using networks that predict on RGB information allows the usage of more common, inexpensive hardware, as special camera devices to capture additional depth information are not required.
 
 <img src="https://github.com/MolineraNegra/thesis_deep_learning/blob/master/images/ResNet_RGB_hist_1_.png" 
 alt="Historam of angualr estiamtion error of the ResNet50 on RGB images" 
@@ -70,9 +67,37 @@ width="500"/>
 alt="Historam of angualr estiamtion error of the ResNet50 on RGBD images" 
 width="500"/>
 
+### Comparison with Box Whisker Plot
+Graphic processing of the results for better comparability 
+
+<img src="https://github.com/MolineraNegra/thesis_deep_learning/blob/master/images/Boxplot_2_.png" 
+alt="Box Whisker Plot" 
+width="700"/>
+
+## Scripts
+
+For more detailed information on the scripts and their functionalities, please refer to the individual notebook files mentioned.
+
+The provided Jupyter notebook scripts offer functionalities for hyperparameter optimization, full training, graphical evaluation, and statistical tests:
+
+### 1_full_HyperParaOpt.ipynb
+Trains a model with the selected net architecture and input channels on 20,000 images for one epoch using various hyperparameter combinations. A grid search over all hyperparameter combinations is performed using [Talos](https://github.com/autonomio/talos). Optimal combinations are determined based on mean absolute errors for full training in the next script.
+
+### 2_full_Training.ipynb
+Fully trains the selected net architecture and input channel using the best hyperparameter combination (lowest mean absolute error during hyperparameter optimization) on 100,000 images and for 400 epochs. The model is saved if it is better than previous models, with adjustments for reduced learning rate and early stopping if needed.
+
+### 3_Graphical_Evaluation_Real_Single_Network_Data_Generation.ipynb
+Tests on 1000 images and calculates mean angular estimation error for the selected net architecture and input channel.
+
+### 4_statistical_Tests.ipynb
+Conducts statistical tests showing that the difference between models trained on RGB images is slightly better than RGB-D images, but the effect size is negligible.
+
 ### 5_Graphical_Evaluation_Box_Whisker_Plot.ipynb
 Graphic processing of the results for better comparability 
 
 <img src="https://github.com/MolineraNegra/thesis_deep_learning/blob/master/images/Boxplot_2_.png" 
 alt="Box Whisker Plot" 
 width="700"/>
+
+
+
